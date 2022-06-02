@@ -1,12 +1,12 @@
-import Wrapper from '../assets/wrappers/JobInfo'
+import JobInfoWrapper from '../assets/wrappers/JobInfoWrapper';
 
 const JobInfo = ({ icon, text }) => {
-  return (
-    <Wrapper>
-      <span className='icon'>{icon}</span>
-      <span className='text'>{text}</span>
-    </Wrapper>
-  )
-}
+    return (
+        <JobInfoWrapper>
+            <span className='icon'>{icon}</span>
+            <span className='text'>{text}</span>
+        </JobInfoWrapper>
+    );
+};
 
-export default JobInfo
+export default JobInfo;
