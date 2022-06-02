@@ -9,21 +9,6 @@ import {
     showStats,
 } from '../controllers/jobsController.js';
 
-router.post('/', (req, res) => {
-    res.send('create job');
-});
-router.get('/', (req, res) => {
-    res.send('Get All Jobs');
-});
-
-router.get('/', (req, res) => {
-    res.send('Get All Jobs');
-});
-
-// router.get('/stats', (req, res) => {
-//     res.send('Get Stats');
-// });
-
 router.patch('/:id', (req, res) => {
     res.send('Update job');
 });

@@ -32,8 +32,8 @@ if (process.env.NODE_ENV !== 'production') {
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-// // only when ready to deploy
-// // app.use(express.static(path.resolve(__dirname, './client/build')))
+// only when ready to deploy
+// app.use(express.static(path.resolve(__dirname, './client/build')))
 
 app.use(express.json());
 app.use(helmet());
@@ -48,15 +48,8 @@ app.use('/api/v1/jobs', authenticateUser, jobsRouter);
 //   res.sendFile(path.resolve(__dirname, './client/build', 'index.html'))
 // })
 
-app.get('/', (req, res) => {
-    res.send('Welcome');
-});
-
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
-
-console.log('process.env.PORT: ', process.env.PORT);
-console.log('process.env.MONGO_URL: ', process.env.MONGO_URL);
 
 const port = process.env.PORT || 5000;
 
